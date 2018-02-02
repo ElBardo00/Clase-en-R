@@ -1,0 +1,48 @@
+cal<-c(4.9,10,5.2,6.1,5.7,
+       4.6,6.2,1.2,5.3,5.3,
+       4.2,5.5,6,5.4,
+       5.2,1.8,4.8,
+       9.7,4.7,3.9)
+cal
+mean(cal    )
+var(cal)
+sqrt(var(cal))
+sel1<- ifelse(cal<4.4,T,F)
+sel1<-cal<4.4
+which(sel1)
+e1<-cal[which(sel1)]
+cal[1]
+e2<-cal[which(sel2)]
+e2
+e3<-cal[which(sel3)]
+e3
+print(e1,e2,e3)
+e1
+e2
+e3
+N
+N<-lenght(cal)
+N<-length(cal)
+N
+medias<-c(mean(e1),mean(e2),mean(e3))
+medias
+pesos<-c (length(e1)/length(cal),length(e2)/length(cal),length(e3)/length(cal))
+pesos
+sum(medias*pesos)
+n<-4
+m1<-sample(e1,round(length(e1)*n/N), F)
+m2<-sample(e2,round(length(e2)*n/N), F)
+m3<- sample(e3,round(length(e3)*n/N), F)
+mediam<-c(mean(m1),mean(m2),mean(m3))
+mediam
+sum(pesos*mediam)
+
+medm <-rep(0)
+for(i in 1:1000){
+        m1<-sample(e1,round(length(e1)*n/N), F)
+        m2<-sample(e2,round(length(e2)*n/N), F)
+        m3<- sample(e3,round(length(e3)*n/N), F)
+     mediam<-c(mean(m1),mean(m2),mean(m3))
+        medm [i]<-sum(pesos*mediam)
+      }
+mean(medm)
